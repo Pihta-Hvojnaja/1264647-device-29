@@ -1,0 +1,235 @@
+/* FONTS */
+/* Gilroy-light */
+@font-face {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Gilroy-Light"), local("Gilroy Light"),
+        url("../fonts/gilroylight.woff2") format("woff2"), /* Super Modern Browsers */
+        url("../fonts/gilroylight.woff") format("woff"); /* Modern Browsers */
+  font-display: swap;
+}
+  
+/* Gilroy-extraBold */
+@font-face {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 800;
+  src: local("Gilroy-ExtraBold"), local("Gilroy Extrabold"),
+        url("../fonts/gilroyextrabold.woff2") format("woff2"), /* Super Modern Browsers */
+        url("../fonts/gilroyextrabold.woff") format("woff"); /* Modern Browsers */
+  font-display: swap;
+}
+
+/* Open Sans-light */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: local("OpenSans-Light"), local("Open Sans Light"),
+        url("../fonts/opensanslight.woff2") format("woff2"), /* Super Modern Browsers */
+        url("../fonts/opensanslight.woff") format("woff"); /* Modern Browsers */
+  font-display: swap;
+}
+  
+/* Open Sans-regular */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("OpenSans"), local("Open Sans Regular"),
+        url("../fonts/opensans.woff2") format("woff2"), /* Super Modern Browsers */
+        url("../fonts/opensans.woff") format("woff"); /* Modern Browsers */
+  font-display: swap;
+}
+  
+/* VARIABLES */
+:root {
+  /* colors */
+  --basic-black: #000000;
+  --basic-dark: #363636;
+  --basic-grey: #464646;
+  --basic-half-grey: #7e7e7e;
+  --basic-grey-light: #e5e5e5;
+  --basic-white: #ffffff;
+
+  --special-yellow-dark: #f0c52e;
+  --special-yellow: #f7e296;
+  --special-green: #91c92f;
+}
+
+/* ALL PAGE */
+.page__body {
+  min-width: 1200px;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 20px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.page__body a {
+  text-decoration: none;
+}
+
+.page__body img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* GENERAL STYLE */
+.hidden {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px; 
+  width: 1px; 
+  overflow: hidden;
+} 
+
+.center {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.reset__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.title {
+
+}
+
+/* HEADER */
+.header__wrapper {
+  min-height: 210px;
+  padding: 20px 60px 0;
+  background-image: linear-gradient(var(--basic-white) 40px, var(--special-yellow) 40px, var(--special-yellow));
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav__logo {
+  margin-right: auto;
+  margin-bottom: 29px;
+}
+
+.nav__wrapper,
+.nav__list__navigation {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1040px;
+}
+
+.nav__wrapper {
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.search {
+  position: relative;
+}
+
+.search__input {
+  width: 254px;
+  height: 20px;
+  padding: 0 37px;
+  font-weight: inherit;
+  border: none;
+  background-color: green;
+}
+
+.search__button {
+  position: absolute;
+  top: 0; bottom: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  background-image: url("../img/symbol_search.svg");
+  background-repeat: no-repeat;
+  background-size: 13px 13px;
+  background-position: center;
+  border: none;
+}
+
+.cabinet *:not(:last-child) {
+  width: 240px;
+  margin-right: 20px;
+}
+
+.cabinet__link {
+  position: relative;
+  padding-left: 22px;
+  color: var(--basic-black);
+}
+
+.cabinet__link::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 13px;
+  height: 14px;
+  background-image: url("../img/icon_user.svg");
+  background-repeat: no-repeat;
+  background-size: 13px 13px;
+  background-position: center;
+}
+
+.cart *:not(:last-child) {
+  margin-right: 40px;
+}
+
+.cart__button {
+  font: inherit;
+  background-color: transparent;
+  border: none;
+}
+
+.nav__item__super {
+  position: relative;
+}
+
+.nav__super__wrapper {
+  display: none;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  bottom:0;
+  left: -60px;
+  width: 1160px;
+  padding: 17px 60px 46px;
+  background-color: var(--special-yellow);
+  transform: translateY(100%);
+}
+
+.nav__item__super:hover  .nav__super__wrapper,
+.nav__super__wrapper:hover {
+  display: flex;
+}
+
+.nav__super__navigation ul {
+  
+}
+
+/* MAIN */
+
+/* FOOTER */

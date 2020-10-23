@@ -1,57 +1,65 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="page">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
+  
+  <body class="page__body">
 
     <!-- HEADER-->
-    <header>
-      <nav>
-        <a>
-          <img src="img/logo_site.svg" width="163" height="35" alt="Логотип сайта в виде надписи Device">
-        </a>
+    <header class="header center">
+      <div class="header__wrapper">
+        <nav class="nav">
+          <a class="nav__logo">
+            <img src="img/logo_site.svg" width="163" height="35" alt="Логотип сайта в виде надписи Device">
+          </a>
 
-        <form action="https://echo.htmlacademy.ru/" method="get">
-          <input type="search" name="search" placeholder="Поиск по сайту">
-          <button type="submit" aria-label="Кнопка поиска по сайту"></button>
-        </form>
+          <div class="nav__wrapper">
+            <form class="search" action="https://echo.htmlacademy.ru/" method="get">
+              <input class="search__input" type="text" name="search" placeholder="Поиск по сайту">
+              <button class="search__button" type="submit" aria-label="Кнопка поиска по сайту"></button>
+            </form>
 
-        <div>
-          <a href="#" aria-label="Войти в учетную запись">Войти</a>
-        </div>
-       
-        <div>
-          <button type="button" aria-label="Сравнить выбранные товары">Сравнить</button>
-          <a href="#" aria-label="Перейти на страницу оформления покупок">Корзина</a>
-        </div>
-        
-        <ul>
-          <li>
-            Каталог товаров
+            <div class="cabinet">
+              <a class="cabinet__link" href="#" aria-label="Войти в учетную запись">Войти</a>
+            </div>
+          
+            <div class="cart">
+              <button class="cart__button" type="button" aria-label="Сравнить выбранные товары">Сравнить</button>
+              <a class="cart__link" href="#" aria-label="Перейти на страницу оформления покупок">Корзина</a>
+            </div>
+          </div>
 
-            <ul>
-              <li><a href="#">Виртуальная реальность</a></li>
-              <li><a href="monopods.html">Моноподы для селфи</a></li>
-              <li><a href="#">Экшн-камеры</a></li>
-            </ul>
+          <ul class="nav__list__navigation reset__list">
+            <li class="nav__item__super">
+              Каталог товаров
+              <div class="nav__super__wrapper">
+                <ul class="reset__list">
+                  <li><a href="#">Виртуальная реальность</a></li>
+                  <li><a href="monopods.html">Моноподы для селфи</a></li>
+                  <li><a href="#">Экшн-камеры</a></li>
+                </ul>
 
-            <ul>
-              <li><a href="#">Фитнес-браслеты</a></li>
-              <li><a href="#">Умные часы</a></li>
-            </ul>
+                <ul class="reset__list">
+                  <li><a href="#">Фитнес-браслеты</a></li>
+                  <li><a href="#">Умные часы</a></li>
+                </ul class="reset__list">
 
-            <ul>
-              <li><a href="#">Квадрокоптер</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Доставка</a></li>
-          <li><a href="#">Гарантия</a></li>
-          <li><a href="#">Контакты</a></li>
-        </ul>
+                <ul class="reset__list">
+                  <li><a href="#">Квадрокоптер</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Гарантия</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
 
-      </nav>
+        </nav>
+      </div>
     </header>
 
     <!-- MAIN -->
@@ -61,7 +69,7 @@
       <section>
         <h2 class="hidden">Слайдер товаров магазина</h2>
 
-        <ul>
+        <ul class="reset__list">
           <li>
             <h3 class="hidden">Первый слайд</h3>
             <img src="img/slider_1.jpg" width="384" height="486" alt="Селфи-палка в сложенном и разложенном состоянии">

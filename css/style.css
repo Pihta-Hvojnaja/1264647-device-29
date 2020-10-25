@@ -53,7 +53,8 @@
   --basic-grey-light: #e5e5e5;
   --basic-white: #ffffff;
 
-  --white-active: rgba(255, 255, 255, 0.3) ;
+  --white-active: rgba(255, 255, 255, 0.3);
+  --black-active: rgba(0, 0, 0, 0.3);
 
   --special-yellow-dark: #f0c52e;
   --special-yellow: #f7e296;
@@ -133,8 +134,7 @@
   word-wrap: break-word;
   background-image: 
     linear-gradient(var(--basic-white) 40px, 
-                    var(--special-yellow) 40px, 
-                    var(--special-yellow));
+                    var(--special-yellow) 40px);
 }
 
 .nav {
@@ -369,12 +369,13 @@
 }
 
 .nav__item:nth-child(4n+4) {
+  margin-right: -4px;
   text-align: right;
 }
 
 .nav__item:not(:first-child),
 .nav__item__super > .nav__link__super {
-  letter-spacing: 0.2em;
+  letter-spacing: 3.6px;
   text-transform: uppercase;
 }
 
@@ -402,14 +403,14 @@
   display: none;
   flex-wrap: wrap;
   position: absolute;
+  z-index: 1;
   bottom: 0;
   left: -60px;
   width: 1160px;
   padding: 30px 60px 41px;
   background-image: 
     linear-gradient(transparent 15px, 
-                    var(--special-yellow) 15px,
-                    var(--special-yellow));
+                    var(--special-yellow) 15px);
   transform: translateY(100%);
 }
 
@@ -450,3 +451,165 @@
 /* MAIN */
 
 /* FOOTER */
+
+/* INDEX PAGE */
+/* slider */ 
+.slider {
+  position: relative;
+}
+
+.slider__list {
+  background-image: 
+    linear-gradient(var(--special-yellow) 114px,
+                    var(--basic-white) 114px);
+}
+
+.slider__item {
+  position: relative;
+  min-height: 570px;
+  padding: 78px 65px 0 600px;
+}
+
+.slider__item::before,
+.slider__item::after {
+  content: "";
+  position: absolute;
+}
+
+.slider__item::before {
+  top: 19px;
+  right: 460px;
+  width: 100px;
+  height: 7px;
+  background-color: var(--basic-white);
+}
+
+.slider__item::after {
+  top: 10px;
+  right: 60px;
+  width: 164px;
+  height: 131px;
+  background-image: url(../img/01.svg);
+}
+
+.slider__img {
+  position: absolute;
+  top: -15px;
+  left: 89px;
+}
+
+.slider__slogan {
+  position: relative;
+  z-index: 1;
+  width: 495px;
+  margin: 0 0 28px 0;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 47px;
+  font-weight: 800;
+  line-height: 58px;
+}
+
+.slider__info {
+  width: 478px;
+  margin:0 0 50px 0;
+}
+
+.slider__link {
+  display: block;
+  width: 220px;
+  min-height: 40px;
+  margin-bottom: 48px;
+  padding: 9px 43px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  background-image: 
+    linear-gradient(transparent 40%,
+                    var(--special-yellow-dark) 40%,
+                    var(--special-yellow-dark) 60%,
+                    transparent 60%);
+}
+
+.slider__link:hover {
+  background-image: 
+    linear-gradient(var(--special-yellow-dark) 50%,
+                    var(--special-yellow-dark) 50%);
+}
+
+.slider__link:active {
+  color: var(--black-active);
+}
+
+.slider__specifications {
+  width: 450px;
+  min-height: 72px;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+}
+
+.slider__specifications td:not(:last-child) {
+  padding-right: 60px;
+  text-align: left;
+}
+
+.slider__value {
+  font-size: 36px;
+  line-height: 43px;
+}
+
+.slider__parameters {
+  padding-top: 13px;
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: 0.1em;
+}
+
+
+
+.slider__buttons {
+  position: absolute;
+  top: 316px;
+  right: 101px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.slider__button {
+  position: relative;
+  width: 26px;
+  height: 30px;
+  padding: 0;
+  background-color: inherit;
+  border: none;
+  border-radius: 50%;
+}
+
+.slider__button::before,
+.slider__button:active::after,
+.button__selected::after {
+  content: "";
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  margin: auto;
+  border: 1px solid var(--basic-black);
+  border-radius: 50%;
+}
+
+.slider__button::before {
+  width: 12px;
+  height: 12px;
+}
+
+.slider__button:active::after,
+.button__selected::after {
+  width: 6px;
+  height: 6px;
+}
+
+.slider__button:focus:not(:active) {
+  outline: none;
+  box-shadow: 0 0 5px 1px var(--basic-black);
+}
+
+.slider__button:active {
+  outline: none;
+}

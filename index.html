@@ -76,33 +76,36 @@
     <main>
       <h1 class="hidden">Магазин технических приборов и устройств "Device"</h1>
 
-      <section>
+      <section class="slider center">
         <h2 class="hidden">Слайдер товаров магазина</h2>
 
-        <ul class="reset__list">
-          <li>
+        <ul class="slider__list reset__list">
+          <li class="slider__item">
             <h3 class="hidden">Первый слайд</h3>
-            <img src="img/slider_1.jpg" width="384" height="486" alt="Селфи-палка в сложенном и разложенном состоянии">
+            <img class="slider__img" src="img/slider_1.png" width="384" height="486" alt="Селфи-палка в сложенном и разложенном состоянии">
             
-            <p>Делай селфи, как Бен Стиллер!</p>
-            <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-            <a href="#" aria-label="Переход на страницу описания товара">Подробнее</a>
+            <p class="slider__slogan">Делай селфи, <br> как Бен Стиллер!</p>
+            <p class="slider__info">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+            <a class="slider__link title" href="#" aria-label="Переход на страницу описания товара">Подробнее</a>
             
-            <dl>
-              <dt>8,5 м</dt>
-              <dd>Длина палки</dd>
-
-              <dt>5 кг</dt>
-              <dd>Вес палки</dd>
-
-              <dt>Карбон</dt>
-              <dd>Материал</dd>
-            </dl>
+            <table class="slider__specifications">
+              <tr>
+                <td class="slider__value">8,5 м</td>
+                <td class="slider__value">5 кг</td>
+                <td class="slider__value">Карбон</td>
+              </tr>
+              
+              <tr>
+                <td class="slider__parameters">Длина палки</td>
+                <td class="slider__parameters">Вес палки</td>
+                <td class="slider__parameters">Материал</td>
+              </tr>
+            </table>
           </li>
 
           <li>
             <h3 class="hidden">Второй слайд</h3>
-            <img src="img/slider_2.jpg" width="345" height="485" alt="Фитнес-браслет черного цвета">
+            <img src="img/slider_2.png" width="345" height="485" alt="Фитнес-браслет черного цвета">
             
             <p>Худеем правильно!</p>
             <p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
@@ -116,7 +119,7 @@
 
           <li>
             <h3 class="hidden">Третий слайд</h3>
-            <img src="img/slider_3.jpg" width="526" height="334" alt="Квадрокоптер с включенной лазерной указкой">
+            <img src="img/slider_3.png" width="526" height="334" alt="Квадрокоптер с включенной лазерной указкой">
 
             <p>Порхает как бабочка, жалит как пчела!</p>
             <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
@@ -132,10 +135,10 @@
           </li>
         </ul>
 
-        <div>
-          <button type="button" aria-label="Первый слайд"></button>
-          <button type="button" aria-label="Второй слайд"></button>
-          <button type="button" aria-label="Третий слайд"></button>
+        <div class="slider__buttons">
+          <button class="slider__button button__selected" type="button" aria-label="Первый слайд"></button>
+          <button class="slider__button" type="button" aria-label="Второй слайд"></button>
+          <button class="slider__button" type="button" aria-label="Третий слайд"></button>
         </div>
       </section>
 

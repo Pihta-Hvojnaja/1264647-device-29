@@ -80,57 +80,66 @@
         <h2 class="hidden">Слайдер товаров магазина</h2>
 
         <ul class="slider__list reset__list">
-          <li class="slider__item">
+          <li class="slider__item slide__1 slider__item__show">
             <h3 class="hidden">Первый слайд</h3>
-            <img class="slider__img" src="img/slider_1.png" width="384" height="486" alt="Селфи-палка в сложенном и разложенном состоянии">
+            <img class="slider__img img__1" src="img/slider_1.png" width="384" height="486" alt="Селфи-палка в сложенном и разложенном состоянии">
             
             <p class="slider__slogan">Делай селфи, <br> как Бен Стиллер!</p>
             <p class="slider__info">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
             <a class="slider__link title" href="#" aria-label="Переход на страницу описания товара">Подробнее</a>
             
-            <table class="slider__specifications">
-              <tr>
-                <td class="slider__value">8,5 м</td>
-                <td class="slider__value">5 кг</td>
-                <td class="slider__value">Карбон</td>
-              </tr>
+            <dl class="slider__specifications">
+              <div class="slider__wrapper">
+                <dt class="slider__term">8,5 м</dt>
+                <dd class="slider__definition">Длина палки</dd>
+              </div>
               
-              <tr>
-                <td class="slider__parameters">Длина палки</td>
-                <td class="slider__parameters">Вес палки</td>
-                <td class="slider__parameters">Материал</td>
-              </tr>
-            </table>
-          </li>
-
-          <li>
-            <h3 class="hidden">Второй слайд</h3>
-            <img src="img/slider_2.png" width="345" height="485" alt="Фитнес-браслет черного цвета">
-            
-            <p>Худеем правильно!</p>
-            <p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
-            <a href="#" aria-label="Переход на страницу описания товара">Подробнее</a>
-            
-            <dl>
-              <dt>48 часов</dt>
-              <dd>Без подзарядки</dd>
+              <div class="slider__wrapper">
+                <dt class="slider__term">5 кг</dt>
+                <dd class="slider__definition">Вес палки</dd>
+              </div>
+             
+              <div class="slider__wrapper">
+                <dt class="slider__term">Карбон</dt>
+                <dd class="slider__definition">Материал</dd>
+              <div>
             </dl>
           </li>
 
-          <li>
-            <h3 class="hidden">Третий слайд</h3>
-            <img src="img/slider_3.png" width="526" height="334" alt="Квадрокоптер с включенной лазерной указкой">
-
-            <p>Порхает как бабочка, жалит как пчела!</p>
-            <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-            <a href="#" aria-label="Переход на страницу описания товара">Подробнее</a>
+          <li class="slider__item slide__2">
+            <h3 class="hidden">Второй слайд</h3>
+            <img class="slider__img img__2" src="img/slider_2.png" width="345" height="485" alt="Фитнес-браслет черного цвета">
             
-            <dl>
-              <dt>800 м</dt>
-              <dd>Дальность полета</dd>
+            <p class="slider__slogan">Худеем <br> правильно!</p>
+            <p class="slider__info">Мотивирующие фитнес-браслеты помогут найти в себе силы <br> не пропускать занятия и соблюдать диету.</p>
+            <a class="slider__link title" href="#" aria-label="Переход на страницу описания товара">Подробнее</a>
+            
+            <dl class="slider__specifications">
+              <div class="slider__wrapper">  
+                <dt class="slider__term">48 часов</dt>
+                <dd class="slider__definition">Без подзарядки</dd>
+              </div>
+            </dl>
+          </li>
 
-              <dt>50 м</dt>
-              <dd>Радиус поражения</dd>
+          <li class="slider__item slide__3">
+            <h3 class="hidden">Третий слайд</h3>
+            <img class="slider__img img__3" src="img/slider_3.png" width="526" height="334" alt="Квадрокоптер с включенной лазерной указкой">
+
+            <p class="slider__slogan slogan__3">Порхает как бабочка, жалит как пчела!</p>
+            <p class="slider__info">Этот обычный, на первый взгляд, квадрокоптер оснащен <br> мощным лазером, замаскированным под стандартную камеру.</p>
+            <a class="slider__link title" href="#" aria-label="Переход на страницу описания товара">Подробнее</a>
+            
+            <dl class="slider__specifications specifications__3">
+              <div class="slider__wrapper">  
+                <dt class="slider__term">800 м</dt>
+                <dd class="slider__definition">Дальность полета</dd>
+              </div>
+              
+              <div class="slider__wrapper">
+                <dt class="slider__term">50 м</dt>
+                <dd class="slider__definition">Радиус поражения</dd>
+              </div>
             </dl>
           </li>
         </ul>
@@ -142,48 +151,68 @@
         </div>
       </section>
 
-      <section>
+      <section class="popular center">
         <h2 class="hidden">Список ссылок на популярные товары магазина</h2>
-        <ul>
-          <li><a href="#">Виртуальная реальность</a></li>
-          <li><a href="monopods.html">Моноподы для селфи</a></li>
-          <li><a href="#">Экшн-камеры</a></li>
-          <li><a href="#">Фитнес-браслеты</a></li>
-          <li><a href="#">Умные часы</a></li>
-          <li><a href="#">Квадрокоптеры</a></li>
+        
+        <ul class="popular__list reset__list">
+          <li class="popular__item">
+            <a class="popular__link link__1 title" href="#">Виртуальная реальность</a>
+          </li>
+          
+          <li class="popular__item">
+            <a class="popular__link link__2 title" href="monopods.html">Моноподы <br> для селфи</a>
+          </li>
+          
+          <li class="popular__item">
+            <a class="popular__link link__3 title" href="#">Экшн-камеры</a>
+          </li>
+          
+          <li class="popular__item">
+            <a class="popular__link link__4 title" href="#">Фитнес-браслеты</a>
+          </li>
+
+          <li class="popular__item">
+            <a class="popular__link link__5 title" href="#">Умные часы</a>
+          </li>
+          
+          <li class="popular__item">
+            <a class="popular__link link__6 title" href="#">Квадрокоптеры</a>
+          </li>
         </ul>
       </section>
 
-      <section>
+      <section class="services">
         <h2 class="hidden">Слайдер услуг магазина</h2>
+        
+        <div class="services__wrapper center">
+          <ul class="services__list reset__list">
+            <li>
+              <h3>Доставка</h3>
+              <p>Мы с удовольствием доставим ваш товар прямо к вашему 
+                подъезду совершенно бесплатно! Ведь мы неплохо 
+                заработаем, поднимая его на ваш этаж.</p>
+            </li>
 
-        <ul>
-          <li>
-            <h3>Доставка</h3>
-            <p>Мы с удовольствием доставим ваш товар прямо к вашему 
-              подъезду совершенно бесплатно! Ведь мы неплохо 
-              заработаем, поднимая его на ваш этаж.</p>
-          </li>
+            <li>
+              <h3>Гарантия</h3>
+              <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — 
+                не переживайте, мы выдадим вам новый.
+                Товар, не дом, конечно же.</p>
+            </li>
 
-          <li>
-            <h3>Гарантия</h3>
-            <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — 
-              не переживайте, мы выдадим вам новый.
-              Товар, не дом, конечно же.</p>
-          </li>
+            <li>
+              <h3>Кредит</h3>
+              <p>Залезть в долговую яму стало проще! Кредитные консультанты 
+                подберут для вас наиболее выгодные 
+                условия кредита. Выгодные для нашего банка, разумеется.</p>
+            </li>
+          </ul>
 
-          <li>
-            <h3>Кредит</h3>
-            <p>Залезть в долговую яму стало проще! Кредитные консультанты 
-              подберут для вас наиболее выгодные 
-              условия кредита. Выгодные для нашего банка, разумеется.</p>
-          </li>
-        </ul>
-
-        <div>
-          <button type="button" aria-label="Открывает описание услуги Доставка">Доставка</button>
-          <button type="button" aria-label="Открывает описание услуги Гарантия">Гарантия</button>
-          <button type="button" aria-label="Открывает описание услуги Кредит">Кредит</button>
+          <div class="services__buttons">
+            <button class="services__button title" type="button" aria-label="Открывает описание услуги Доставка">Доставка</button>
+            <button class="services__button title" type="button" aria-label="Открывает описание услуги Гарантия">Гарантия</button>
+            <button class="services__button title" type="button" aria-label="Открывает описание услуги Кредит">Кредит</button>
+          </div>
         </div>
       </section>
 

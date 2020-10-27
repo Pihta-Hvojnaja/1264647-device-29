@@ -121,6 +121,14 @@
   color: var(--basic-black);
 }
 
+.title__big {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 47px;
+  font-weight: 800;
+  line-height: 58px;
+  letter-spacing: 0.2em;
+}
+
 .focus:focus:not(:active) {
   outline-offset: 7px;
   outline: 5px var(--basic-half-grey);
@@ -537,10 +545,7 @@
   z-index: 1;
   width: 495px;
   margin: 0 0 28px 0;
-  font-family: "Gilroy", Arial, sans-serif;
-  font-size: 47px;
-  font-weight: 800;
-  line-height: 58px;
+  letter-spacing: 0;
 }
 
 .slogan__3 {
@@ -558,7 +563,8 @@
   width: 220px;
   min-height: 40px;
   margin-bottom: 52px;
-  padding: 9px 43px;
+  padding: 9px 9px 9px 14px;
+  text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.2em;
   background-image: 
@@ -739,6 +745,7 @@
 
 /* services */
 .services {
+  min-height: 388px;
   background-image: 
     linear-gradient(var(--basic-white) 100px,
                     var(--basic-grey-light) 100px);
@@ -763,7 +770,6 @@
 }
 
 .services__button {
-  display: block;
   position: relative;
   width: 160px;
   min-height: 40px;
@@ -789,13 +795,26 @@
   background-color: transparent;
 }
 
-.services__button:hover {
+.services__button:hover:not(.services__button__checked):not(:focus) {
   background-image: 
     linear-gradient(var(--special-yellow-dark) 50%,
                     var(--special-yellow-dark) 50%);
 }
 
-.services__button:focus,
+.services__button:focus:not(:active):not(.services__button__checked) {
+  outline: none;
+  color: var(--special-yellow);
+  background-image: 
+    linear-gradient(to right, 
+                    var(--basic-grey), 
+                    var(--basic-grey-light));
+}
+
+.services__button:focus::before {
+  width: 134px;
+}
+
+.services__button__checked,
 .services__button:active {
   outline: none;
   color: var(--special-yellow);
@@ -804,7 +823,201 @@
                     var(--basic-black) 50%);
 }
 
-.services__button:focus::before,
+.services__button__checked::before,
 .services__button:active::before {
   background-color: var(--basic-black);
+}
+
+.services__item {
+  display: none;
+  position: relative;
+  width: 876px;
+  padding: 70px 165px 20px 116px;
+}
+
+.services__item::after {
+  content: "";
+  position: absolute;
+  top: 55px; right: -15px;
+  width: 171px;
+  height: 195px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.item__1::after {
+  background-image: url(../img/icon_service_delivery.svg);
+}
+
+.item__2::after {
+  background-image: url(../img/icon_service_warranty.svg);
+}
+
+.item__3::after {
+  top: 45px; right: 0;
+  background-image: url(../img/icon_service_credit.svg);
+}
+
+.tab__show {
+  display: block;
+}
+
+.services__item h3 {
+  width: 275px;
+  margin: 0 0 42px 0;
+}
+
+.services__item p {
+  width: 575px;
+  margin: 0;
+  line-height: 30px;
+  letter-spacing: 0.1em;
+}
+
+/* logotypes */
+.logotypes {
+  padding-top: 90px;
+  padding-bottom: 85px;
+}
+
+.logotypes__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.logotypes__item:not(:nth-child(4n+4)) {
+  margin-right: 40px;
+}
+
+.logotypes__img,
+.logotypes__link:active {
+  filter: grayscale(1);
+}
+
+.logotypes__link:focus {
+  outline: none;
+}
+
+.logotypes__link:hover .logotypes__img,
+.logotypes__link:focus .logotypes__img {
+  filter: grayscale(0);
+}
+
+/* main__wrapper */
+.main__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.main__wrapper > *:nth-child(2n+1) {
+  width: 473px;
+}
+
+.main__wrapper > *:nth-child(2n+2) {
+  width: 560px;
+}
+
+.main__wrapper h2 {
+  margin: 0 0 41px 0;
+}
+
+.about,
+.contacts {
+  position: relative;
+  padding: 57px 0 20px;
+}
+
+.about::before,
+.contacts::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 80px;
+  height: 7px;
+  background-color: var(--basic-black);
+}
+
+.about p:not(:last-of-type),
+.contacts p:not(:last-of-type) {
+  margin: 0 0 40px 0;
+  line-height: 28px;
+}
+
+.contacts p:not(:last-of-type) {
+  width: 510px;
+}
+
+.about p:last-of-type {
+  margin: 0 0 61px 0;
+  line-height: 28px;
+}
+
+.contacts p:last-of-type {
+  margin: 0;
+}
+
+.about p {
+  width: 473px;
+}
+
+.about__list {
+  margin-bottom: 69px;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.about__item {
+  position: relative;
+  padding-left: 32px;
+}
+
+.about__item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.about__item::before {
+  content: "";
+  position: absolute;
+  top: 0; bottom: 0; left: 0;
+  width: 8px;
+  height: 8px;
+  margin: auto;
+  border-radius: 50%;
+  border: 2px solid var(--basic-grey-light);
+}
+
+.contacts__link {
+  display: block;
+  width: 560px;
+  height: 222px;
+  margin-bottom: 77px;
+  background-color: var(--basic-grey-light);
+}
+
+.main__wrapper__link {
+  display: block;
+  width: 260px;
+  min-height: 40px;
+  padding: 9px 9px 9px 14px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  background-image: 
+    linear-gradient(transparent 40%,
+                    var(--special-yellow-dark) 40%,
+                    var(--special-yellow-dark) 60%,
+                    transparent 60%);
+}
+
+.main__wrapper__link:hover {
+  background-image: 
+    linear-gradient(var(--special-yellow-dark) 50%,
+                    var(--special-yellow-dark) 50%);
+}
+
+.main__wrapper__link:active {
+  color: var(--black-active);
 }

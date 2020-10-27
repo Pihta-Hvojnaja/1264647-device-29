@@ -73,7 +73,7 @@
     </header>
 
     <!-- MAIN -->
-    <main>
+    <main class="page__main">
       <h1 class="hidden">Магазин технических приборов и устройств "Device"</h1>
 
       <section class="slider center">
@@ -84,7 +84,7 @@
             <h3 class="hidden">Первый слайд</h3>
             <img class="slider__img img__1" src="img/slider_1.png" width="384" height="486" alt="Селфи-палка в сложенном и разложенном состоянии">
             
-            <p class="slider__slogan">Делай селфи, <br> как Бен Стиллер!</p>
+            <p class="slider__slogan title__big">Делай селфи, <br> как Бен Стиллер!</p>
             <p class="slider__info">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
             <a class="slider__link title" href="#" aria-label="Переход на страницу описания товара">Подробнее</a>
             
@@ -110,7 +110,7 @@
             <h3 class="hidden">Второй слайд</h3>
             <img class="slider__img img__2" src="img/slider_2.png" width="345" height="485" alt="Фитнес-браслет черного цвета">
             
-            <p class="slider__slogan">Худеем <br> правильно!</p>
+            <p class="slider__slogan title__big">Худеем <br> правильно!</p>
             <p class="slider__info">Мотивирующие фитнес-браслеты помогут найти в себе силы <br> не пропускать занятия и соблюдать диету.</p>
             <a class="slider__link title" href="#" aria-label="Переход на страницу описания товара">Подробнее</a>
             
@@ -126,7 +126,7 @@
             <h3 class="hidden">Третий слайд</h3>
             <img class="slider__img img__3" src="img/slider_3.png" width="526" height="334" alt="Квадрокоптер с включенной лазерной указкой">
 
-            <p class="slider__slogan slogan__3">Порхает как бабочка, жалит как пчела!</p>
+            <p class="slider__slogan slogan__3 title__big">Порхает как бабочка, жалит как пчела!</p>
             <p class="slider__info">Этот обычный, на первый взгляд, квадрокоптер оснащен <br> мощным лазером, замаскированным под стандартную камеру.</p>
             <a class="slider__link title" href="#" aria-label="Переход на страницу описания товара">Подробнее</a>
             
@@ -186,99 +186,104 @@
         
         <div class="services__wrapper center">
           <ul class="services__list reset__list">
-            <li>
-              <h3>Доставка</h3>
-              <p>Мы с удовольствием доставим ваш товар прямо к вашему 
-                подъезду совершенно бесплатно! Ведь мы неплохо 
+            <li class="services__item item__1 tab__show">
+              <h3 class="title__big">Доставка</h3>
+              <p>Мы с удовольствием доставим ваш товар прямо к вашему <br>
+                подъезду совершенно бесплатно! Ведь мы неплохо <br>
                 заработаем, поднимая его на ваш этаж.</p>
             </li>
 
-            <li>
-              <h3>Гарантия</h3>
+            <li class="services__item item__2">
+              <h3 class="title__big">Гарантия</h3>
               <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — 
-                не переживайте, мы выдадим вам новый.
+                не переживайте, мы выдадим вам новый. <br>
                 Товар, не дом, конечно же.</p>
             </li>
 
-            <li>
-              <h3>Кредит</h3>
+            <li class="services__item item__3">
+              <h3 class="title__big">Кредит</h3>
               <p>Залезть в долговую яму стало проще! Кредитные консультанты 
-                подберут для вас наиболее выгодные 
+                подберут для вас наиболее выгодные <br>
                 условия кредита. Выгодные для нашего банка, разумеется.</p>
             </li>
           </ul>
 
           <div class="services__buttons">
-            <button class="services__button title" type="button" aria-label="Открывает описание услуги Доставка">Доставка</button>
+            <button class="services__button services__button__checked title" type="button" aria-label="Открывает описание услуги Доставка">Доставка</button>
             <button class="services__button title" type="button" aria-label="Открывает описание услуги Гарантия">Гарантия</button>
             <button class="services__button title" type="button" aria-label="Открывает описание услуги Кредит">Кредит</button>
           </div>
         </div>
       </section>
 
-      <section>
+      <section class="logotypes center">
         <h2 class="hidden">Логотипы брендов</h2>
 
-        <ul>
-          <li>
+        <ul class="logotypes__list reset__list">
+          <li class="logotypes__item">
             <p class="hidden">Перейти на страницу производителя беспилотников Dajiang Innovation Technology</p>
-            <a href="#">
-              <img src="img/logo_1_dji.png" width="260" height="100" alt="Логотип производителя беспилотников Dajiang Innovation Technology">
+            <a class="logotypes__link" href="#">
+              <img class="logotypes__img" src="img/logo_1_dji.png" width="260" height="100" alt="Логотип производителя беспилотников Dajiang Innovation Technology">
             </a>
           </li>
 
-          <li>
+          <li class="logotypes__item">
             <p class="hidden">Перейти на страницу производителя аксессуаров для камер GoPro SP Gadgets</p>
-            <a href="#">
-              <img src="img/logo_2_sp_gadgets.png" width="260" height="100" alt="Логотип производителя аксессуаров для камер GoPro SP Gadgets">
+            <a class="logotypes__link" href="#">
+              <img class="logotypes__img" src="img/logo_2_sp_gadgets.png" width="260" height="100" alt="Логотип производителя аксессуаров для камер GoPro SP Gadgets">
             </a>
           </li>
 
-          <li>
+          <li class="logotypes__item">
             <p class="hidden">Перейти на страницу производителя экшен-камер GoPro</p>
-            <a href="#">
-              <img src="img/logo_3_go_pro.png" width="260" height="100" alt="Логотип производителя экшен-камер GoPro">
+            <a class="logotypes__link" href="#">
+              <img class="logotypes__img" src="img/logo_3_go_pro.png" width="260" height="100" alt="Логотип производителя экшен-камер GoPro">
             </a>
           </li>
 
-          <li>
+          <li class="logotypes__item">
             <p class="hidden">Перейти на страницу производителя шлемов виртуальной реальности Vive</p>
-            <a href="#">
-              <img src="img/logo_4_vive.png" width="260" height="100" alt="Логотип производителя шлемов виртуальной реальности Vive">
+            <a class="logotypes__link" href="#">
+              <img class="logotypes__img" src="img/logo_4_vive.png" width="260" height="100" alt="Логотип производителя шлемов виртуальной реальности Vive">
             </a>
           </li>
         </ul>
       </section>
 
-      <section>
-        <h2>О нас</h2>
+      <div class="main__wrapper center">
+        <section class="about">
+          <h2 class="title__big">О нас</h2>
 
-        <p>Огромный выбор гаджетов не оставит равнодушным гика, 
-          который есть в каждом из нас.</p>
-        <p>Мы можем доставить ваш товар в самые отдаленные точки 
-          России! DEVICE работает со многими транспортными компаниями:</p>
+          <p>Огромный выбор гаджетов не оставит равнодушным гика, 
+            который есть в каждом из нас.</p>
+          <p>Мы можем доставить ваш товар в самые отдаленные точки 
+            России! DEVICE работает со многими транспортными компаниями:</p>
 
-        <ul>
-          <li>Деловые линии</li>
-          <li>Автотрейдинг</li>
-          <li>ЖелДорЭкспедиция</li>
-        </ul>
+          <ul class="about__list reset__list">
+            <li class="about__item">Деловые линии</li>
+            <li class="about__item">Автотрейдинг</li>
+            <li class="about__item">ЖелДорЭкспедиция</li>
+          </ul>
 
-        <a href="#">Подробнее о нас</a>
-      </section>
+          <a class="main__wrapper__link title" href="#">Подробнее о нас</a>
+        </section>
 
-      <section>
-        <h2>Контакты</h2>
-        <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете 
-          проверить работоспособность покупки. Всякое бывает.</p>
-        
-          <a href="#"> 
+        <section class="contacts">
+          <h2 class="title__big">Контакты</h2>
+          <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете 
+            проверить работоспособность покупки. Всякое бывает.
+          </p>
+          
+          <a class="contacts__link" href="#"> 
             <p class="hidden">Мы на карте</p>
             <img src="img/map.jpg" width="560" height="222" alt="Магазин Девайс по адресу: г. Москва, ул. Строителей, 15">
           </a>
 
-        <p><a href="#" aria-label="Перейти на страницу обратной связи">Напишите нам</a></p>
-      </section>
+          <p>
+            <a class="main__wrapper__link title" href="#" aria-label="Перейти на страницу обратной связи">Напишите нам</a>
+          </p>
+        </section>
+      </div>
     </main>
 
     <!-- FOOTER -->

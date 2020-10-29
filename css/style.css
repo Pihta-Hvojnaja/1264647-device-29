@@ -56,6 +56,7 @@
   --white-hover: rgba(255, 255, 255, 0.6);
   --white-active: rgba(255, 255, 255, 0.3);
   --black-active: rgba(0, 0, 0, 0.3);
+  --black-modal-show: rgba(0, 0, 0, 0.15);
 
   --special-yellow-dark: #f0c52e;
   --special-yellow-darker: #ffc600;
@@ -63,6 +64,7 @@
   --special-green: #91c92f;
 
   --color-nav-plus: #AD9F69;
+  --color-modal-input: #f2f2f2;
 }
 
 /* ALL PAGE */
@@ -131,10 +133,20 @@
   letter-spacing: 0.2em;
 }
 
+.reaction:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
 .focus:focus:not(:active) {
   outline-offset: 7px;
   outline: 5px var(--basic-half-grey);
   outline-style: inset;
+}
+
+.reaction:active {
+  outline: none;
+  opacity: 0.3;
 }
 
 /* HEADER */
@@ -226,6 +238,7 @@
 .search__button {
   display: none;
   width: 88px;
+  min-height: 50px;
   margin: 0;
   padding: 13px 17px;
   font: inherit;
@@ -339,19 +352,6 @@
   color: var(--white-active);
 }
 
-.cabinet__link:hover,
-.cart__button:hover,
-.cart__link:hover {
-  opacity: 0.6;
-}
-
-.cabinet__link:active,
-.cart__button:active,
-.cart__link:active {
-  outline: none;
-  opacity: 0.3;
-}
-
 /* second row of the grid */
 .nav__item {
   margin-bottom: 20px;
@@ -447,14 +447,6 @@
   color: var(--basic-black);
 }
 
-.bottom__menu a:hover {
-  opacity: 0.6;
-}
-
-.bottom__menu a:active {
-  opacity: 0.3;
-}
-
 /* MAIN */
 
 /* FOOTER */
@@ -469,6 +461,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   padding-top: 46px;
+  padding-bottom: 40px;
 }
 
 /* shared grid  */
@@ -578,20 +571,6 @@
   background-image: url(../img/icon_cart_yellow.svg);
 }
 
-/* поведение интеракт. эл. верхнего меню */
-.footer__cabinet__link:hover,
-.footer__cart__button:hover,
-.footer__cart__link:hover {
-  opacity: 0.6;
-}
-
-.footer__cabinet__link:active,
-.footer__cart__button:active,
-.footer__cart__link:active {
-  outline: none;
-  opacity: 0.3;
-}
-
 /* second row of the grid */
 .footer__middle {
   margin-bottom: 66px;
@@ -637,20 +616,11 @@
   text-transform: uppercase;
 }
 
-.footer__middle__list a:hover {
-  opacity: 0.6;
-}
-
-.footer__middle__list a:active {
-  opacity: 0.3;
-}
-
 /* third row of the grid */
 .footer__bottom {
   justify-content: space-between;
   position: relative;
   padding-left: 368px;
-  margin-bottom: 40px;
 }
 
 .footer__bottom::before {
@@ -1257,5 +1227,142 @@
   color: var(--black-active);
 }
 
+/* modal__commun */ 
+.modal__commun {
+  position: fixed;
+  top: 100%; 
+  left: 50%; 
+  transform: translate(-50%, -100%);
+  width: 960px;
+  min-height: 550px;
+  padding: 92px 100px 0;
+  background-color: var(--basic-white);
+  box-shadow: 0px 10px 16px var(--black-modal-show);
+}
 
+.modal__commun__btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 55px;
+  height: 55px;
+  opacity: 0.5;
+  background-color: var(--special-yellow-dark);
+  border-radius: 50%;
+  border: none;
+  transform: rotate(45deg);
+}
 
+.modal__commun__btn::before,
+.modal__commun__btn::after {
+  content: "";
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  width: 2px;
+  height: 20px;
+  margin: auto;
+  background-color: var(--basic-white);
+}
+
+.modal__commun__btn::after {
+  transform: rotate(90deg);
+}
+
+.modal__commun__btn:hover {
+  opacity: 1;
+}
+
+.modal__commun__btn:focus:not(:active) {
+  outline: none;
+  box-shadow: 
+          0 0 0 2px var(--basic-white),
+          0 0 0 4px var(--special-green);
+}
+
+.modal__commun__btn:active {
+  outline: none;
+  opacity: 0.3;
+}
+
+.modal__commun form,
+.modal__commun p {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.p__input {
+  margin: 0 0 20px 0;
+}
+
+.p__input:first-child {
+  margin-right: 40px;
+}
+
+.modal__commun input,
+.modal__commun textarea {
+  margin-top: 10px;
+  padding: 17px 0 15px 20px;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color: var(--basic-dark);
+  background-color: var(--color-modal-input);
+  border: none;
+}
+
+.modal__commun textarea {
+  min-height: 167px;
+  margin-bottom: 25px;
+  resize: none;
+}
+
+.modal__commun *::placeholder {
+  font: inherit;
+  color: var(--basic-black);
+  opacity: 0.4;
+}
+
+.label__name {
+  width: 360px;
+}
+
+.name {
+ width: 360px;
+ 
+}
+
+.label__email {
+  width: 360px;
+}
+
+.email {
+  width: 360px;
+}
+
+.letter {
+  width: 760px;
+}
+
+.modal__commun__submit {
+  position: relative;
+  width: 200px;
+  min-height: 40px;
+  margin-bottom: 21px;
+  padding: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  background-color: transparent;
+  background-image: 
+    linear-gradient(transparent 40%,
+                    var(--special-yellow) 40%,
+                    var(--special-yellow) 60%,
+                    transparent 60%);
+  border: none;
+}
+
+.modal__commun__submit:hover {
+  background-image: 
+    linear-gradient(var(--special-yellow) 50%,
+                    var(--special-yellow) 50%);
+}

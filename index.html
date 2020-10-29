@@ -27,17 +27,17 @@
             </form>
 
             <div class="cabinet">
-              <a class="cabinet__link focus" href="#" aria-label="Войти в учетную запись">
+              <a class="cabinet__link reaction focus" href="#" aria-label="Войти в учетную запись">
                 Войти
               </a>
             </div>
           
             <div class="cart">
-              <button class="cart__button focus" type="button" aria-label="Сравнить выбранные товары">
+              <button class="cart__button reaction focus" type="button" aria-label="Сравнить выбранные товары">
                 Сравнить
               </button>
              
-              <a class="cart__link focus" href="#" aria-label="Перейти на страницу оформления покупок">
+              <a class="cart__link reaction focus" href="#" aria-label="Перейти на страницу оформления покупок">
                 Корзина
               </a>
             </div>
@@ -45,27 +45,27 @@
 
           <ul class="bottom__menu reset__list">
             <li class="nav__item nav__item__super">
-              <a class="nav__link__super title focus" href="#">Каталог товаров</a>
+              <a class="nav__link__super title reaction focus" href="#">Каталог товаров</a>
               <div class="nav__wrapper__super">
                 <ul class="nav__list__sub reset__list">
-                  <li><a class="focus" href="#">Виртуальная реальность</a></li>
-                  <li><a class="focus" href="monopods.html">Моноподы для селфи</a></li>
-                  <li><a class="focus" href="#">Экшн-камеры</a></li>
+                  <li><a class="reaction focus" href="#">Виртуальная реальность</a></li>
+                  <li><a class="reaction focus" href="monopods.html">Моноподы для селфи</a></li>
+                  <li><a class="reaction focus" href="#">Экшн-камеры</a></li>
                 </ul>
 
                 <ul class="nav__list__sub reset__list">
-                  <li><a class="focus" href="#">Фитнес-браслеты</a></li>
-                  <li><a class="focus" href="#">Умные часы</a></li>
+                  <li><a class="reaction focus" href="#">Фитнес-браслеты</a></li>
+                  <li><a class="reaction focus" href="#">Умные часы</a></li>
                 </ul>
 
                 <ul class="nav__list__sub reset__list">
-                  <li><a class="focus" href="#">Квадрокоптер</a></li>
+                  <li><a class="reaction focus" href="#">Квадрокоптер</a></li>
                 </ul>
               </div>
             </li>
-            <li class="nav__item"><a class="title focus" href="#">Доставка</a></li>
-            <li class="nav__item"><a class="title focus" href="#">Гарантия</a></li>
-            <li class="nav__item"><a class="title focus" href="#">Контакты</a></li>
+            <li class="nav__item"><a class="title reaction focus" href="#">Доставка</a></li>
+            <li class="nav__item"><a class="title reaction focus" href="#">Гарантия</a></li>
+            <li class="nav__item"><a class="title reaction focus" href="#">Контакты</a></li>
           </ul>
 
         </nav>
@@ -295,15 +295,15 @@
         
         <div class="footer__top">
           <div class="footer__cabinet">
-            <a class="footer__cabinet__link focus" href="#" aria-label="Войти в учетную запись">Войти</a>
+            <a class="footer__cabinet__link reaction focus" href="#" aria-label="Войти в учетную запись">Войти</a>
           </div>
 
           <div class="footer__cart">
-            <button class="footer__cart__button focus" type="button" aria-label="Сравнить выбранные товары">
+            <button class="footer__cart__button reaction focus" type="button" aria-label="Сравнить выбранные товары">
               Сравнить
             </button>
             
-            <a class="footer__cart__link focus" href="#" aria-label="Перейти на страницу оформления покупок">
+            <a class="footer__cart__link reaction focus" href="#" aria-label="Перейти на страницу оформления покупок">
               Корзина
             </a>
           </div>
@@ -314,15 +314,15 @@
 
           <ul class="footer__middle__list reset__list">
             <li class="footer__middle__item">
-              <a class="title" href="#">Доставка</a>
+              <a class="title reaction" href="#">Доставка</a>
             </li>
     
             <li class="footer__middle__item">
-              <a class="title" href="#">Гарантия</a>
+              <a class="title reaction" href="#">Гарантия</a>
             </li>
     
             <li class="footer__middle__item">
-              <a class="title" href="#">Контакты</a>
+              <a class="title reaction" href="#">Контакты</a>
             </li>
           </ul>
 
@@ -378,38 +378,38 @@
     </footer>
 
     <!-- MODAL WINDOWS -->
-    <section>
+    <section class="modal__commun">
       <h2 class="hidden">Форма обратной связи</h2>
       
-      <button type="button" aria-label="Закрыть окно обратной связи">×</button>  
+      <button class="modal__commun__btn" type="button" aria-label="Закрыть окно обратной связи"></button>  
       
       <form action="https://echo.htmlacademy.ru/" method="post">
-        <p>
-          <label>
+        <p class="p__input">
+          <label class="label__name title">
             Ваше имя:
-            <input type="text" name="name" required placeholder="Имя Фамилия"> 
+            <input class="name" type="text" name="name" required placeholder="Имя Фамилия"> 
           </label>
         </p>
 
-        <p>
-          <label>
+        <p class="p__input">
+          <label class="label__email title">
             Ваш e-mail:
-            <input type="email" name="email" required placeholder="email@example.com"> 
+            <input class="email" type="email" name="email" required placeholder="email@example.com"> 
           </label>
         </p>
         
-        <p>
-          <label>
+        <p class="p__textarea">
+          <label class="label__letter title">
             Текст письма:
-            <textarea name="letter">В свободной форме</textarea>
+            <textarea class="letter" name="letter" rows="5" required placeholder="В свободной форме"></textarea>
           </label>
         </p> 
         
-        <button type="submit">Отправить</button>
+        <button class="modal__commun__submit title" type="submit">Отправить</button>
       </form>    
     </section>
 
-    <section>
+    <section class="modal__map">
       <h2 class="hidden">Как до нас добраться</h2>
       <!--
       <div style="position:relative;overflow:hidden;">

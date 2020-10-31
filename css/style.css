@@ -53,7 +53,6 @@
   --basic-grey-light: #e5e5e5;
   --basic-white: #ffffff;
 
-  --white-hover: rgba(255, 255, 255, 0.6);
   --white-active: rgba(255, 255, 255, 0.3);
   --black-active: rgba(0, 0, 0, 0.3);
   --black-modal-show: rgba(0, 0, 0, 0.15);
@@ -71,7 +70,10 @@
 
 /* ALL PAGE */
 .page__body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
   min-width: 1200px;
+  height: 100vh;
   margin: 0;
   padding: 0;
   font-family: "Open Sans", Arial, sans-serif;
@@ -159,6 +161,10 @@
                     var(--basic-grey-light));
 }
 
+.btn__focus:active {
+  outline: none;
+}
+
 .reaction:active {
   outline: none;
   opacity: 0.3;
@@ -209,28 +215,28 @@
   margin-bottom: 35px;
 }
 
-.top__menu > * {
+.top__menu .element {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
 
-.top__menu > *:nth-child(3n+1) {
+.top__menu .element:nth-child(3n+1) {
   width: 440px;
   margin-right: 99px;
 }
 
-.top__menu > *:nth-child(3n+2) {
+.top__menu .element:nth-child(3n+2) {
   width: 245px;
   margin-right: auto;
 }
 
-.top__menu > *:nth-child(3n+3) {
+.top__menu .element:nth-child(3n+3) {
   width: 218px;
 }
 
-.top__menu > *:last-child {
+.top__menu .element:last-child {
   width: 218px;
   margin-right: 0;
 }
@@ -262,7 +268,7 @@
   border: 2px solid var(--basic-black);
 }
 
-.cabinet *:not(:nth-child(even)) {
+.cabinet .element:not(:nth-child(even)) {
   margin-right: 20px;
 }
 
@@ -275,17 +281,15 @@
   vertical-align: middle;
 }
 
-.cart__button {
+.cart__compare {
   position: relative;
   width: 100px;
   margin-right: 20px;
-  padding: 0 0 0 20px;
-  font: inherit;
-  background-color: transparent;
-  border: none;
+  padding: 0 0 0 25px;
+  color: inherit;
 }
 
-.cart__link {
+.cart__cart {
   position: relative;
   width: 83px;
   padding-left: 20px;
@@ -296,8 +300,8 @@
 /* псевдоэлементы иконок верхнего меню */
 .search::before,
 .cabinet__link::before,
-.cart__button::before,
-.cart__link::before {
+.cart__compare::before,
+.cart__cart::before {
   content: "";
   position: absolute;
   top: 0; bottom: 0; left: 1px;
@@ -317,17 +321,17 @@
   background-image: url(../img/icon_user.svg);
 }
 
-.cart__button::before,
-.cart__link::before {
+.cart__compare::before,
+.cart__cart::before {
   width: 10px;
   height: 10px;
 }
 
-.cart__button::before {
+.cart__compare::before {
   background-image: url(../img/icon_compare.svg);
 }
 
-.cart__link::before {
+.cart__cart::before {
   bottom: 2px;
   background-image: url(../img/icon_cart.svg);
 }
@@ -497,17 +501,17 @@
 }
 
 /* first row of the grid */
-.footer__top > * {
+.footer__top .element {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-.footer__top > *:nth-child(2n+1) {
+.footer__top .element:nth-child(2n+1) {
   width: 222px;
 }
 
-.footer__top > *:nth-child(2n+2) {
+.footer__top .element:nth-child(2n+2) {
   width: 218px;
 }
 
@@ -517,7 +521,7 @@
   margin-bottom: 35px;
 }
 
-.footer__cabinet *:not(:nth-child(even)) {
+.footer__cabinet .element:not(:nth-child(even)) {
   margin-right: 20px;
 }
 
@@ -531,18 +535,15 @@
   vertical-align: middle;
 }
 
-.footer__cart__button {
+.footer__cart__compare {
   position: relative;
   width: 100px;
   margin-right: 20px;
-  padding: 0 0 0 20px;
-  font: inherit;
+  padding: 0 0 0 25px;
   color: inherit;
-  background-color: transparent;
-  border: none;
 }
 
-.footer__cart__link {
+.footer__cart__cart {
   position: relative;
   width: 83px;
   padding-left: 20px;
@@ -552,8 +553,8 @@
 
 /* псевдоэлементы иконок верхнего меню */
 .footer__cabinet__link::before,
-.footer__cart__button::before,
-.footer__cart__link::before {
+.footer__cart__compare::before,
+.footer__cart__cart::before {
   content: "";
   position: absolute;
   margin: auto;
@@ -567,19 +568,19 @@
   background-image: url(../img/icon_user_yellow.svg);
 }
 
-.footer__cart__button::before {
+.footer__cart__compare::before {
   top: 3px; bottom: 0; left: 1px;
   width: 14px;
   height: 14px;
   background-image: url(../img/icon_compare_yellow.svg);
 }
 
-.footer__cart__link::before {
+.footer__cart__cart::before {
   width: 10px;
   height: 10px;
 }
 
-.footer__cart__link::before {
+.footer__cart__cart::before {
   top: 0; bottom: 0; left: 1px;
   background-image: url(../img/icon_cart_yellow.svg);
 }
@@ -589,11 +590,11 @@
   margin-bottom: 66px;
 }
 
-.footer__middle > *:not(:nth-child(3n+3)) {
+.footer__middle .element:not(:nth-child(3n+3)) {
   margin-right: 68px;
 }
 
-.footer__middle > *:last-child {
+.footer__middle .element:last-child {
   margin-right: 0;
 }
 
@@ -609,6 +610,15 @@
 
 .address__right {
   text-align: right;
+}
+
+.footer__address:focus-within:not(:active) {
+  outline-offset: 7px;
+  outline: 2px solid var(--basic-white);
+}
+
+.address__link:focus {
+  outline: none;
 }
 
 .address__link:hover,
@@ -657,15 +667,18 @@
 }
 
 .social__link path {
-  fill: var(--white-active);
-}
-
-.social__link:hover path {
-  fill: var(--white-hover);
-}
-
-.social__link:active path {
   fill: var(--basic-white);
+}
+
+.social__link {
+  opacity: 0.3;
+}
+
+.social__link:hover {
+  opacity: 0.6;
+}
+
+.social__link:active {
   opacity: 0.1;
 }
 
@@ -716,26 +729,29 @@
 }
 
 .slider__item::after {
-  top: 10px;
-  right: 60px;
+  top: -33px;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 179px;
+  line-height: 219px;
+  text-transform: uppercase;
+  color: var(--basic-white);
 }
 
 .slide__1::after {
-  width: 164px;
-  height: 131px;
-  background-image: url(../img/01.svg);
+  content: "01";
+  right: 48px;
 }
 
 .slide__2::after {
-  width: 194px;
-  height: 131px;
-  background-image: url(../img/02.svg);
+  content: "02";
+  right: 54px;
 }
 
 .slide__3::after {
-  width: 196px;
-  height: 131px;
-  background-image: url(../img/03.svg);
+  content: "03";
+  right: 52px;
 }
 
 .slider__img {
@@ -772,7 +788,7 @@
 
 .slider__info {
   width: 478px;
-  margin:0 0 50px 0;
+  margin: 0 0 50px 0;
 }
 
 .slider__link {
@@ -893,8 +909,8 @@
 .popular__item {
   position: relative;
   width: 160px;
+  min-height: 241px;
   margin-bottom: 40px;
-  padding-top: 198px;
   letter-spacing: 1px;
 }
 
@@ -908,6 +924,7 @@
 
 .popular__link {
   display: block;
+  padding-top: 198px;
 }
 
 .popular__link::before,
@@ -955,6 +972,18 @@
 
 .popular__link:hover {
   --special-yellow: var(--special-yellow-dark);
+}
+
+.popular__link:focus:not(:active) {
+  outline: none;
+  color: var(--special-yellow);
+}
+
+.popular__item:focus-within:not(:active) {
+    background-image: 
+      linear-gradient(to right, 
+                      var(--basic-grey), 
+                      var(--basic-grey-light));
 }
 
 .popular__link:active {
@@ -1137,11 +1166,11 @@
   padding-bottom: 56px;
 }
 
-.main__wrapper > *:nth-child(2n+1) {
+.main__wrapper > .element:nth-child(2n+1) {
   width: 473px;
 }
 
-.main__wrapper > *:nth-child(2n+2) {
+.main__wrapper > .element:nth-child(2n+2) {
   width: 560px;
 }
 
@@ -1341,8 +1370,7 @@
   margin-bottom: 15px;
 }
 
-.modal__commun__wrapper input,
-.letter {
+.name, .email, .letter {
   margin-top: 10px;
   padding: 17px 0 15px 20px;
   font-family: "Gilroy", Arial, sans-serif;
@@ -1352,6 +1380,7 @@
   color: var(--basic-dark);
   background-color: var(--color-modal-input);
   border: 2px solid transparent;
+  box-shadow: none;
 }
 
 .modal__commun__wrapper input {
@@ -1368,7 +1397,7 @@
   resize: none;
 }
 
-.modal__commun *::placeholder {
+.modal__commun .element::placeholder {
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -1377,21 +1406,19 @@
   opacity: 0.4;
 }
 
-.modal__commun__wrapper input:hover,
-.letter:hover {
+.name:hover:not(:focus):not(.invalid), 
+.email:hover:not(:focus):not(.invalid),
+.letter:hover:not(:focus):not(.invalid) {
   background-color: var(--color-modal-input-hover);
+  box-shadow: none;
 }
 
-.modal__commun__wrapper input:focus,
+.name:focus, .email:focus,
 .letter:focus {
   outline: none;
   background-color: var(--basic-white);
   border: 2px solid var(--special-yellow);
-}
-
-/* класс добавляется скриптом невалидным полям при попытке отправки формы */
-.invalid {
-  background-color: var(--color-modal-input-invalid);
+  box-shadow: none;
 }
 
 .modal__commun__submit {
@@ -1417,6 +1444,10 @@
                     var(--special-yellow) 50%);
 }
 
+.modal__commun__submit:active {
+  color: var(--black-active);
+}
+
 /* modal__map */
 .modal__map {
   width: 994px;
@@ -1433,7 +1464,34 @@
   box-shadow: 0px 10px 16px var(--black-modal-show);
 }
 
+
+/* JS */
+
 /* показать модальное окно */
 .modal__show {
   display: block;
+}
+
+/* Анимации, оживление, валидация формы*/ 
+@keyframes shake {
+  10%, 30%,  50%, 70%, 90% { 
+    transform: rotate(1deg);
+  }
+
+  20%, 40%, 60%, 80%, 100% {
+    transform: rotate(-1deg);
+  }
+}
+
+.shake {
+  animation-name: shake;
+  animation-duration: 0.2s;
+  animation-fill-mode: backwards;
+}
+
+/* класс добавляется скриптом невалидным полям при попытке отправки формы */
+.invalid:invalid {
+  background-color: var(--color-modal-input-invalid);
+  border: 2px solid var(--color-modal-input-invalid);
+  box-shadow: none;
 }

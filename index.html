@@ -18,26 +18,26 @@
           </a>
 
           <div class="top__menu">
-            <form class="search" action="https://echo.htmlacademy.ru/" method="get">
-              <input class="search__input" type="text" name="search" placeholder="Поиск по сайту" autocomplete="off">
+            <form class="search element" action="https://echo.htmlacademy.ru/" method="get">
+              <input class="search__input" type="search" name="search" placeholder="Поиск по сайту" autocomplete="off">
 
               <button class="search__button" type="submit" aria-label="Кнопка поиска по сайту">
                 Найти
               </button>
             </form>
 
-            <div class="cabinet">
-              <a class="cabinet__link reaction focus" href="#" aria-label="Войти в учетную запись">
+            <div class="cabinet element">
+              <a class="cabinet__link element reaction focus" href="#" aria-label="Войти в учетную запись">
                 Войти
               </a>
             </div>
           
-            <div class="cart">
-              <button class="cart__button reaction focus" type="button" aria-label="Сравнить выбранные товары">
+            <div class="cart element">
+              <a class="cart__compare reaction focus" href="#" aria-label="Сравнить выбранные товары">
                 Сравнить
-              </button>
+              </a>
              
-              <a class="cart__link reaction focus" href="#" aria-label="Перейти на страницу оформления покупок">
+              <a class="cart__cart reaction focus" href="#" aria-label="Перейти на страницу оформления покупок">
                 Корзина
               </a>
             </div>
@@ -156,27 +156,27 @@
         
         <ul class="popular__list reset__list">
           <li class="popular__item">
-            <a class="popular__link link__1 title btn__focus" href="#">Виртуальная реальность</a>
+            <a class="popular__link link__1 title" href="#">Виртуальная реальность</a>
           </li>
           
           <li class="popular__item">
-            <a class="popular__link link__2 title btn__focus" href="monopods.html">Моноподы <br> для селфи</a>
+            <a class="popular__link link__2 title" href="monopods.html">Моноподы <br> для селфи</a>
           </li>
           
           <li class="popular__item">
-            <a class="popular__link link__3 title btn__focus" href="#">Экшн-камеры</a>
+            <a class="popular__link link__3 title" href="#">Экшн-камеры</a>
           </li>
           
           <li class="popular__item">
-            <a class="popular__link link__4 title btn__focus" href="#">Фитнес-браслеты</a>
+            <a class="popular__link link__4 title" href="#">Фитнес-браслеты</a>
           </li>
 
           <li class="popular__item">
-            <a class="popular__link link__5 title btn__focus" href="#">Умные часы</a>
+            <a class="popular__link link__5 title" href="#">Умные часы</a>
           </li>
           
           <li class="popular__item">
-            <a class="popular__link link__6 title btn__focus" href="#">Квадрокоптеры</a>
+            <a class="popular__link link__6 title" href="#">Квадрокоптеры</a>
           </li>
         </ul>
       </section>
@@ -251,7 +251,7 @@
       </section>
 
       <div class="main__wrapper center">
-        <section class="about">
+        <section class="about element">
           <h2 class="title__big">О нас</h2>
 
           <p>Огромный выбор гаджетов не оставит равнодушным гика, 
@@ -268,7 +268,7 @@
           <a class="main__wrapper__link title btn__focus" href="#">Подробнее о нас</a>
         </section>
 
-        <section class="contacts">
+        <section class="contacts element">
           <h2 class="title__big">Контакты</h2>
           <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете 
             проверить работоспособность покупки. Всякое бывает.
@@ -296,25 +296,27 @@
         </a>
         
         <div class="footer__top">
-          <div class="footer__cabinet">
-            <a class="footer__cabinet__link reaction focus__footer" href="#" aria-label="Войти в учетную запись">Войти</a>
+          <div class="footer__cabinet element">
+            <a class="footer__cabinet__link element reaction focus__footer" href="#" aria-label="Войти в учетную запись">
+              Войти
+            </a>
           </div>
 
-          <div class="footer__cart">
-            <button class="footer__cart__button reaction focus__footer" type="button" aria-label="Сравнить выбранные товары">
+          <div class="footer__cart element">
+            <a class="footer__cart__compare reaction focus__footer" href="#" aria-label="Сравнить выбранные товары">
               Сравнить
-            </button>
+            </a>
             
-            <a class="footer__cart__link reaction focus__footer" href="#" aria-label="Перейти на страницу оформления покупок">
+            <a class="footer__cart__cart reaction focus__footer" href="#" aria-label="Перейти на страницу оформления покупок">
               Корзина
             </a>
           </div>
         </div>
 
         <div class="footer__middle"> 
-          <p class="footer__address address">г. Москва, ул. Строителей, 15</p>
+          <p class="footer__address element address">г. Москва, ул. Строителей, 15</p>
 
-          <ul class="footer__middle__list reset__list">
+          <ul class="footer__middle__list element reset__list">
             <li class="footer__middle__item">
               <a class="title reaction focus__footer" href="#">Доставка</a>
             </li>
@@ -328,8 +330,8 @@
             </li>
           </ul>
 
-          <address class="footer__address address address__right">
-            Тел.: <a class="address address__link focus__footer" href="tel:+74954959595">+7 (495) 495-95-95</a>
+          <address class="footer__address element address address__right">
+            Тел.: <a class="address address__link" href="tel:+74954959595">+7 (495) 495-95-95</a>
           </address>
         </div>
         
@@ -385,27 +387,27 @@
       
       <button class="btn__close" type="button" aria-label="Закрыть окно обратной связи"></button>  
       
-      <form action="https://echo.htmlacademy.ru/" method="post">
+      <form class="feedback__form" action="https://echo.htmlacademy.ru/" method="post">
         <div class="modal__commun__wrapper"> 
           <label class="label__name title">
             Ваше имя:
-            <input class="name" type="text" name="name" required autocomplete="off" placeholder="Имя Фамилия"> 
+            <input class="name element" type="text" name="name" required autocomplete="off" placeholder="Имя Фамилия"> 
           </label>
         
           <label class="label__email title">
             Ваш e-mail:
-            <input class="email" type="email" name="email" required autocomplete="off" placeholder="email@example.com"> 
+            <input class="email element" type="email" name="email" required autocomplete="off" placeholder="email@example.com"> 
           </label>
         </div>
         
         <p class="p__textarea">
           <label class="label__letter title">
             Текст письма:
-            <textarea class="letter" name="letter" rows="5" required autocomplete="off" placeholder="В свободной форме"></textarea>
+            <textarea class="letter element" name="letter" rows="5" required autocomplete="off" placeholder="В свободной форме"></textarea>
           </label>
         </p> 
         
-        <button class="modal__commun__submit title" type="submit">Отправить</button>
+        <button class="modal__commun__submit title btn__focus" type="submit">Отправить</button>
       </form>    
     </section>
 

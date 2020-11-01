@@ -137,6 +137,10 @@
   letter-spacing: 0.2em;
 }
 
+.current {
+  opacity: 0.3;
+}
+
 .reaction:hover {
   cursor: pointer;
   opacity: 0.6;
@@ -145,11 +149,13 @@
 .focus:focus:not(:active) {
   outline-offset: 7px;
   outline: 2px solid var(--basic-black);
+  opacity: 1;
 }
 
 .focus__footer:focus:not(:active) {
   outline-offset: 7px;
   outline: 2px solid var(--basic-white);
+  opacity: 1;
 }
 
 .btn__focus:focus:not(:active) {
@@ -183,6 +189,7 @@
 /* nav__logo */
 .nav__logo {
   display: block;
+  width: 164px;
   margin-right: auto;
   margin-bottom: 10px;
 }
@@ -191,10 +198,9 @@
   opacity: 0.6;
 }
 
-.logo[href]:focus:not(:active) {
+.nav__logo[href]:focus:not(:active) {
   outline-offset: 7px;
-  outline: 5px var(--basic-half-grey);
-  outline-style: inset;
+  outline: 2px solid var(--basic-black);
 }
 
 .logo[href]:active img {
@@ -215,28 +221,28 @@
   margin-bottom: 35px;
 }
 
-.top__menu .element {
+.top__menu > .element {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
 
-.top__menu .element:nth-child(3n+1) {
+.top__menu > .element:nth-child(3n+1) {
   width: 440px;
   margin-right: 99px;
 }
 
-.top__menu .element:nth-child(3n+2) {
+.top__menu > .element:nth-child(3n+2) {
   width: 245px;
   margin-right: auto;
 }
 
-.top__menu .element:nth-child(3n+3) {
+.top__menu > .element:nth-child(3n+3) {
   width: 218px;
 }
 
-.top__menu .element:last-child {
+.top__menu > .element:last-child {
   width: 218px;
   margin-right: 0;
 }
@@ -268,17 +274,25 @@
   border: 2px solid var(--basic-black);
 }
 
-.cabinet .element:not(:nth-child(even)) {
-  margin-right: 20px;
+.cabinet > .element:not(:nth-child(even)):not(:last-child) {
+  margin-right: 5px;
 }
 
 .cabinet__link {
   display: inline-block;
   position: relative;
-  width: 100px;
+  width: 160px;
   padding-left: 25px;
   color: var(--basic-black);
   vertical-align: middle;
+}
+
+.cabinet__out {
+  display: inline-block;
+  width: 70px;
+  color: var(--basic-black);
+  vertical-align: middle;
+  opacity: 0.3;
 }
 
 .cart__compare {
@@ -487,7 +501,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
-  max-width: 480px;
+  width: 481px;
   min-height: 58px;
   margin-bottom: 35px;
 }
@@ -501,17 +515,17 @@
 }
 
 /* first row of the grid */
-.footer__top .element {
+.footer__top > .element {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-.footer__top .element:nth-child(2n+1) {
-  width: 222px;
+.footer__top > .element:nth-child(2n+1) {
+  width: 245px;
 }
 
-.footer__top .element:nth-child(2n+2) {
+.footer__top > .element:nth-child(2n+2) {
   width: 218px;
 }
 
@@ -521,16 +535,41 @@
   margin-bottom: 35px;
 }
 
-.footer__cabinet .element:not(:nth-child(even)) {
-  margin-right: 20px;
+.footer__logo[href]:focus:not(:active) {
+  outline-offset: 7px;
+  outline: 2px solid var(--basic-white);
+}
+
+.footer__cabinet {
+  justify-content: space-between;
+}
+
+.footer__cabinet > .element:not(:nth-child(even)):not(:last-child) {
+  margin-right: 10px;
 }
 
 .footer__cabinet__link {
   display: inline-block;
   position: relative;
-  width: 88px;
+  width: 90px;
   margin-left: auto;
   padding-left: 25px;
+  color: inherit;
+  vertical-align: middle;
+}
+
+.footer__cabinet__in {
+  display: inline-block;
+  position: relative;
+  width: 170px;
+  padding-left: 28px;
+  color: inherit;
+  vertical-align: middle;
+}
+
+.footer__cabinet__out {
+  display: inline-block;
+  width: 64px;
   color: inherit;
   vertical-align: middle;
 }
@@ -553,6 +592,7 @@
 
 /* псевдоэлементы иконок верхнего меню */
 .footer__cabinet__link::before,
+.footer__cabinet__in::before,
 .footer__cart__compare::before,
 .footer__cart__cart::before {
   content: "";
@@ -561,7 +601,8 @@
   background-repeat: no-repeat;
 }
 
-.footer__cabinet__link::before {
+.footer__cabinet__link::before,
+.footer__cabinet__in::before {
   top: 2px; bottom: 0; left: 3px;
   width: 9px;
   height: 10px;
@@ -590,11 +631,11 @@
   margin-bottom: 66px;
 }
 
-.footer__middle .element:not(:nth-child(3n+3)) {
+.footer__middle > .element:not(:nth-child(3n+3)) {
   margin-right: 68px;
 }
 
-.footer__middle .element:last-child {
+.footer__middle > .element:last-child {
   margin-right: 0;
 }
 
@@ -1397,7 +1438,7 @@
   resize: none;
 }
 
-.modal__commun .element::placeholder {
+.modal__commun > .element::placeholder {
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 14px;
   font-weight: 400;

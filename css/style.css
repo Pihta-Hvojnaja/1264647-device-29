@@ -66,6 +66,7 @@
   --color-modal-input: #f2f2f2;
   --color-modal-input-hover: #eaeaea;
   --color-modal-input-invalid: #f6dada;
+  --color-filter-head: #dcdcdc;
 }
 
 /* ALL PAGE */
@@ -137,10 +138,6 @@
   letter-spacing: 0.2em;
 }
 
-.current {
-  opacity: 0.3;
-}
-
 .reaction:hover {
   cursor: pointer;
   opacity: 0.6;
@@ -184,6 +181,10 @@
   background-image: 
     linear-gradient(var(--basic-white) 40px, 
                     var(--special-yellow) 40px);
+}
+
+.header__current {
+  opacity: 0.3;
 }
 
 /* nav__logo */

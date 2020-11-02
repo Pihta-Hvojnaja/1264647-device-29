@@ -54,7 +54,7 @@
               <div class="nav__wrapper__super">
                 <ul class="nav__list__sub reset__list">
                   <li><a class="reaction focus" href="#">Виртуальная реальность</a></li>
-                  <li><a class="current">Моноподы для селфи</a></li>
+                  <li><a class="header__current">Моноподы для селфи</a></li>
                   <li><a class="reaction focus" href="#">Экшн-камеры</a></li>
                 </ul>
 
@@ -78,7 +78,7 @@
     </header>
 
     <main class="monopods">
-      <div class="center">
+      <div class="top__wrapper center">
         <h1 class="page__head title__big">Моноподы для селфи</h1>
 
         <ul class="breadcrumbs reset__list">
@@ -100,11 +100,13 @@
         </ul>
       </div>
     
-      <div class="monopods__wrapper">
-        <section class="filter">
-          <h2>Фильтр:</h2>
-
-          <form action="https://echo.htmlacademy.ru/" method="get">
+      <div class="bottom__wrapper">
+        <div class="filter__head">
+          <h2 class="filter__title">Фильтр:</h2>
+        </div>
+        
+        <div class="filter">
+          <form class="filter__form" action="https://echo.htmlacademy.ru/" method="get">
             <fieldset>
               <legend>Стоимость</legend>
 
@@ -174,98 +176,143 @@
 
             <button type="submit">Показать</button>
           </form>
+        </div>
+
+        <section class="sort">
+          <div class="sort__wrapper">
+            <h2 class="filter__title">Сортировка:</h2>
+
+            <ul class="sort__list reset__list">
+              <li class="sort__item">
+                <a class="sort__link sort__link__current" href="#">
+                  По цене
+                </a>
+              </li>
+              
+              <li class="sort__item">
+                <a class="sort__link" href="#">
+                  По типу
+                </a>
+              </li>
+              
+              <li class="sort__item">
+                <a class="sort__link" href="#">
+                  По популярности
+                </a>
+              </li>
+            </ul>
+
+            <a class="triangle" href="#">
+              <span class="hidden">
+                Расположить по возрастанию
+              </span>
+            </a>
+            
+            <a class="triangle triangle_up triangle__current" href="#">
+              <span class="hidden">
+                Расположить по убыванию
+              </span>
+            </a>
+          </div>
         </section>
 
-        <div class="monopods__wrapper__wrapper">
-          <section>
-            <h2>Сортировка:</h2>
-            
-            <ul>
-              <li><a href="#">По цене</a></li>
-              <li><a href="#">По типу</a></li>
-              <li><a href="#">По популярности</a></li>
-            </ul>
+        <section class="carts">
+          <h2 class="hidden">Результаты фильтрации</h2>
 
-            <a href="#"><span class="hidden">Расположить по возрастанию</span></a>
-            <a href="#"><span class="hidden">Расположить по убыванию</span></a>
-          </section>
-
-          <section>
-            <h2 class="hidden">Результаты фильтрации</h2>
-
-            <ul>
-              <li>
-                <article>
-                  <h3>
-                    <a href="#">Любительская селфи-палка</a>
-                  </h3>
-                  
+          <ul class="carts__list reset__list">
+            <li>
+              <article class="cart">
+                <h3>
+                  <a href="#">Любительская селфи-палка</a>
+                </h3>
+                
+                <div class="cart__wrapper">
                   <img src="img/card_img_1.jpg" width="360" height="380" alt="Разложенная селфи-палка с фотоаппаратом">
                   
-                  <p>1 100 руб.</p> 
-                  
-                  <a href="#" aria-label="Добавить в корзину">В корзину</a>
-                  <a href="#">Добавить к сравнению</a>
-                </article>
-              </li>
+                  <div class="button__wrapper">
+                    <a href="#" aria-label="Добавить в корзину">В корзину</a>
+                    <a href="#">Добавить к сравнению</a>
+                  </div>
+                </div>
 
-              <li>
-                <article>
-                  <h3>
-                    <a href="#">Профессиональная селфи-палка</a>
-                  </h3>
-                  
+                <p>1 100 руб.</p> 
+              </article>
+            </li>
+
+            <li>
+              <article class="cart">
+                <h3>
+                  <a href="#">Профессиональная селфи-палка</a>
+                </h3>
+                
+                <div class="cart__wrapper">
                   <img src="img/card_img_2.jpg" width="360" height="380" alt="Черная селфи-палка в сложенном состоянии">
                   
-                  <p>1 500 руб.</p> 
-                  
-                  <a href="#" aria-label="Добавить в корзину">В корзину</a>
-                  <a href="#">Добавить к сравнению</a>
-                </article>
-              </li>
+                  <div class="button__wrapper">
+                    <a href="#" aria-label="Добавить в корзину">В корзину</a>
+                    <a href="#">Добавить к сравнению</a>
+                  </div>
+                </div>
 
-              <li>
-                <article>
-                  <h3>
-                    <a href="#">Непотопляемая селфи-палка</a>
-                  </h3>
-                  
+                <p>1 500 руб.</p> 
+              </article>
+            </li>
+
+            <li>
+              <article class="cart">
+                <h3>
+                  <a href="#">Непотопляемая селфи-палка</a>
+                </h3>
+                
+                <div class="cart__wrapper">
                   <img src="img/card_img_3.jpg" width="360" height="380" alt="Черно-желтая миниатюрная селфи-палка с водонепроницаемым фотоаппаратом">
                   
-                  <p>1 500 руб.</p> 
+                  <div class="button__wrapper">
+                    <a href="#" aria-label="Добавить в корзину">В корзину</a>
+                    <a href="#">Добавить к сравнению</a>
+                  </div>
+                </div>
                   
-                  <a href="#" aria-label="Добавить в корзину">В корзину</a>
-                  <a href="#">Добавить к сравнению</a>
-                </article>
-              </li>
+                <p>1 500 руб.</p> 
+              </article>
+            </li>
 
-              <li>
-                <article>
-                  <h3>
-                    <a href="#">Селфи-палка «Следуй за мной»</a>
-                  </h3>
-                  
+            <li>
+              <article class="cart">
+                <h3>
+                  <a href="#">Селфи-палка «Следуй за мной»</a>
+                </h3>
+                
+                <div class="cart__wrapper">
                   <img src="img/card_img_4.jpg" width="360" height="380" alt="Селфи-палка переходящая в пластиковую руку">
                   
-                  <p>1 900 руб.</p> 
-                  
-                  <a href="#" aria-label="Добавить в корзину">В корзину</a>
-                  <a href="#">Добавить к сравнению</a>
-                </article>
-              </li>
-            </ul>
+                  <div class="button__wrapper">
+                    <a href="#" aria-label="Добавить в корзину">В корзину</a>
+                    <a href="#">Добавить к сравнению</a>
+                  </div>
+                </div>
 
-            <div>
-              <a href="#" aria-label="Предыдущая страцица">Назад</a>
-              <ul>
-                <li><a aria-label="Страница 1">1</a></li>
-                <li><a href="#" aria-label="Страница 2">2</a></li>
-                <li><a href="#" aria-label="Страница 3">3</a></li>
-              </ul>
-              <a href="#" aria-label="Следующая страница">Вперед</a>
-            </div>
-          </section>
-        </div>
+                <p>1 900 руб.</p> 
+              </article>
+            </li>
+          </ul>
+
+          <div>
+            <a href="#" aria-label="Предыдущая страцица">
+              Назад
+            </a>
+
+            <ul>
+              <li><a aria-label="Страница 1">1</a></li>
+              <li><a href="#" aria-label="Страница 2">2</a></li>
+              <li><a href="#" aria-label="Страница 3">3</a></li>
+            </ul>
+            
+            <a href="#" aria-label="Следующая страница">
+              Вперед
+            </a>
+          </div>
+        </section>
       </div>
     </main>
 

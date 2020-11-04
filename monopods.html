@@ -107,74 +107,85 @@
         
         <div class="filter">
           <form class="filter__form" action="https://echo.htmlacademy.ru/" method="get">
-            <fieldset>
+            <fieldset class="filter__fieldset price">
               <legend>Стоимость</legend>
 
-              <label>
-                от <input type="text" name="cost__after" aria-label="Установить стоимость от" placeholder="0">
-              </label>
-
-              <label>
-                до <input type="text" name="cost__before" aria-label="Установить стоимость до" placeholder="5000">
-              </label> 
-
-              <div>
-                <div>
-                  <div></div>
+              <div class="scale">
+                <div class="scale__scale">
+                  <div class="scale__sub" style="
+                    width: 58%;
+                    margin-left: 0;">
+                  </div>
                 </div>
-                <button type="button" aria-label="Установить стоимость от"></button>
-                <button type="button" aria-label="Установить стоимость до"></button>
+                
+                <button class="scale__btn" type="button" aria-label="Установить стоимость от" 
+                  style="left: 0;"></button>
+                
+                <button class="scale__btn" type="button" aria-label="Установить стоимость до"
+                  style="left: 57%;"></button>
+              </div>
+              
+              <div class="span">
+                <label class="price__label">
+                  от <input class="price__number" type="text" name="cost__after" 
+                        aria-label="Установить стоимость от" min="10" max="1000000" autocomplete="off" placeholder="0">
+                </label>
+
+                <label class="price__label">
+                  до <input class="price__number" type="text" name="cost__before" 
+                        aria-label="Установить стоимость до" min="10" max="1000000" autocomplete="off" placeholder="5000">
+                </label> 
               </div>
             </fieldset>
 
-            <fieldset>
+            <fieldset class="filter__fieldset color">
               <legend>Цвет</legend>
 
-              <ul>
-                <li>
-                  <input type="checkbox" id="black" name="color__black" checked>
-                  <label for="black">Чёрный</label>
+              <ul class="color__list reset__list">
+                <li class="color__item">
+                  <input class="color__checkbox hidden" type="checkbox" id="black" name="color__black" checked>
+                  <label class="color__label" for="black">Чёрный</label>
                 </li>
 
-                <li>
-                  <input type="checkbox" id="white" name="color__white">
-                  <label for="white">Белый</label>
+                <li class="color__item">
+                  <input class="color__checkbox hidden" type="checkbox" id="white" name="color__white">
+                  <label class="color__label" for="white">Белый</label>
                 </li>
 
-                <li>
-                  <input type="checkbox" id="blue" name="color__blue" checked>
-                  <label for="blue">Синий</label>
+                <li class="color__item">
+                  <input class="color__checkbox hidden" type="checkbox" id="blue" name="color__blue" checked>
+                  <label class="color__label" for="blue">Синий</label>
                 </li>
 
-                <li>
-                  <input type="checkbox" id="red" name="color__red" checked>
-                  <label for="red">Красный</label>
+                <li class="color__item">
+                  <input class="color__checkbox hidden" type="checkbox" id="red" name="color__red" checked>
+                  <label class="color__label" for="red">Красный</label>
                 </li>
 
-                <li>
-                  <input type="checkbox" id="pink" name="color__pink">
-                  <label for="pink">Розовый</label>
+                <li class="color__item">
+                  <input class="color__checkbox hidden" type="checkbox" id="pink" name="color__pink">
+                  <label class="color__label" for="pink">Розовый</label>
                 </li>
               </ul>
             </fieldset>
 
-            <fieldset>
+            <fieldset class="filter__fieldset bluetooth">
               <legend>Bluetooth</legend>
 
-              <ul>
-                <li>
-                  <input type="radio" id="yes" name="bluetooth" value="yes" checked>
-                  <label for="yes">Есть</label>
+              <ul class="bluetooth__list reset__list">
+                <li class="bluetooth__item">
+                  <input class="bluetooth__radio hidden" type="radio" id="yes" name="bluetooth" value="yes" checked>
+                  <label class="bluetooth__label" for="yes">Есть</label>
                 </li>
 
-                <li>
-                  <input type="radio" id="no" name="bluetooth" value="no">
-                  <label for="no">Нет</label>
+                <li class="bluetooth__item">
+                  <input class="bluetooth__radio hidden" type="radio" id="no" name="bluetooth" value="no">
+                  <label class="bluetooth__label" for="no">Нет</label>
                 </li>
               </ul>
             </fieldset>
 
-            <button type="submit">Показать</button>
+            <button class="filter__submit title btn__focus" type="submit">Показать</button>
           </form>
         </div>
 

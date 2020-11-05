@@ -156,6 +156,13 @@
   opacity: 1;
 }
 
+.focus__text:focus:not(:active) {
+  outline: none;
+  border-top-color: var(--basic-black);
+  border-bottom-color: var(--basic-black);
+  opacity: 1;
+}
+
 .focus__footer:focus:not(:active) {
   outline-offset: 7px;
   outline: 2px solid var(--basic-white);
@@ -390,6 +397,7 @@
 .search__button:focus,
 .search__button:active {
   display: block;
+  outline: none;
   color: var(--white-active);
 }
 
@@ -466,6 +474,11 @@
 .nav__wrapper__super:not(:focus-within) {
   opacity: 0;
   pointer-events: none;
+}
+
+.nav__list__sub a {
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
 }
 
 .nav__list__sub:not(:last-child) {

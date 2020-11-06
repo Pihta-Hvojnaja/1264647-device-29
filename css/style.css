@@ -379,6 +379,18 @@
 }
 
 /* поведение интеракт. эл. верхнего меню */
+.search__input::-webkit-input-placeholder {
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+.search__input::-moz-placeholder {
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+.search__input::-ms-input-placeholder {
+  color: var(--basic-black);
+  opacity: 0.3;
+}
 .search__input::placeholder {
   color: var(--basic-black);
   opacity: 0.3;
@@ -389,8 +401,32 @@
   border-bottom-color: var(--basic-black);
 }
 
+.search__input:hover::-webkit-input-placeholder {
+  opacity: 0.6;
+}
+
+.search__input:hover::-moz-placeholder {
+  opacity: 0.6;
+}
+
+.search__input:hover::-ms-input-placeholder {
+  opacity: 0.6;
+}
+
 .search__input:hover::placeholder {
   opacity: 0.6;
+}
+
+.search__input:focus::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+.search__input:focus::-moz-placeholder {
+  opacity: 1;
+}
+
+.search__input:focus::-ms-input-placeholder {
+  opacity: 1;
 }
 
 .search__input:focus::placeholder {
@@ -722,7 +758,8 @@
 .footer__middle__list {
   display: grid;
   grid-template-columns: auto auto auto;
-  column-gap: 33px;
+  -moz-column-gap: 33px;
+       column-gap: 33px;
   width: 423px;
 }
 
@@ -1274,7 +1311,8 @@
 
 .logotypes__img,
 .logotypes__link:active {
-  filter: grayscale(1);
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
 }
 
 .logotypes__link:focus {
@@ -1282,11 +1320,13 @@
 }
 
 .logotypes__link:hover .logotypes__img {
-  filter: grayscale(0);
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
 }
 
 .logotypes__link:focus .logotypes__img {
-  filter: grayscale(0);
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
   transform: scale(1.2);
 }
 
@@ -1534,6 +1574,33 @@
 .letter {
   min-height: 167px;
   resize: none;
+}
+
+.modal__commun > .element::-webkit-input-placeholder {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color: var(--basic-black);
+  opacity: 0.4;
+}
+
+.modal__commun > .element::-moz-placeholder {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color: var(--basic-black);
+  opacity: 0.4;
+}
+
+.modal__commun > .element::-ms-input-placeholder {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color: var(--basic-black);
+  opacity: 0.4;
 }
 
 .modal__commun > .element::placeholder {
@@ -1819,6 +1886,21 @@
   padding: 0;
   background-color: transparent;
   border: none;
+}
+
+.price__number::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 1;
+}
+
+.price__number::-moz-placeholder {
+  color: inherit;
+  opacity: 1;
+}
+
+.price__number::-ms-input-placeholder {
+  color: inherit;
+  opacity: 1;
 }
 
 .price__number::placeholder {
@@ -2108,7 +2190,8 @@
 .carts__list {
   display: grid;
   grid-template-columns: auto auto;
-  column-gap: 22px;
+  -moz-column-gap: 22px;
+       column-gap: 22px;
   row-gap: 30px;
   margin-bottom: 20px;
 }
@@ -2183,7 +2266,8 @@
 
 .cart:focus-within:not(:active) .cart__img,
 .cart__wrapper:hover .cart__img {
-  filter: opacity(0.7);
+  -webkit-filter: opacity(0.7);
+          filter: opacity(0.7);
 }
 
 .cart__add {
@@ -2301,6 +2385,15 @@
 }
 
 /* Анимации, оживление, валидация формы*/ 
+@-webkit-keyframes shake {
+  10%, 30%,  50%, 70%, 90% { 
+    transform: rotate(1deg);
+  }
+
+  20%, 40%, 60%, 80%, 100% {
+    transform: rotate(-1deg);
+  }
+} 
 @keyframes shake {
   10%, 30%,  50%, 70%, 90% { 
     transform: rotate(1deg);
@@ -2312,9 +2405,12 @@
 }
 
 .shake {
-  animation-name: shake;
-  animation-duration: 0.2s;
-  animation-fill-mode: backwards;
+  -webkit-animation-name: shake;
+          animation-name: shake;
+  -webkit-animation-duration: 0.2s;
+          animation-duration: 0.2s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
 }
 
 /* класс добавляется скриптом невалидным полям при попытке отправки формы */

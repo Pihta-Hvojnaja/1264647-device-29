@@ -53,7 +53,7 @@ const modalWork = function (modal, btn, shake) {
     evt.preventDefault();
     
     if (!modal.classList.contains('modal__show')) {
-      modal.classList.add('modal__show');
+      modal.classList.add('modal__show', 'appear');
       
       if(shake) {
         feedbackForm.classList.remove('shake');
@@ -95,8 +95,8 @@ for (let i = 0; i < btnClose.length; i++) {
   btnClose[i].addEventListener('click', function(evt) {
     evt.preventDefault();
 
-    modalFeedback.classList.remove('modal__show');
-    modalMap.classList.remove('modal__show');
+    modalFeedback.classList.remove('modal__show', 'appear');
+    modalMap.classList.remove('modal__show', 'appear');
 
     remInvalid(inputReq, 'invalid');
   });
@@ -104,8 +104,8 @@ for (let i = 0; i < btnClose.length; i++) {
 
 window.addEventListener('keydown', function(evt) {
   if(evt.keyCode === 27) {
-    modalFeedback.classList.remove('modal__show');
-    modalMap.classList.remove('modal__show');
+    modalFeedback.classList.remove('modal__show','appear');
+    modalMap.classList.remove('modal__show', 'appear');
 
     remInvalid(inputReq, 'invalid');
   }

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
-    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   
@@ -19,7 +19,8 @@
 
           <div class="top__menu">
             <form class="search element" action="https://echo.htmlacademy.ru/" method="get">
-              <input class="search__input" type="search" name="search" placeholder="Поиск по сайту" autocomplete="off">
+              <label class="hidden" for="search">Найти на сайте:</label>
+              <input class="search__input" id="search" type="search" name="search" placeholder="Поиск по сайту" autocomplete="off">
 
               <button class="search__button" type="submit" aria-label="Кнопка поиска по сайту">
                 Найти

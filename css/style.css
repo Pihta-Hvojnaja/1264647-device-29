@@ -1472,7 +1472,6 @@
   z-index: 3;
   top: 50%; 
   left: 50%; 
-  transform: translate(-50%, -50%);
 }
 
 .btn__close {
@@ -2389,6 +2388,34 @@
 }
 
 /* Анимации, оживление, валидация формы*/ 
+@-webkit-keyframes appear {
+  from {
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  to {
+    transform: translate(-50%, -50%) scale(1);
+  }
+} 
+@keyframes appear {
+  from {
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  to {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.appear {
+  -webkit-animation-name: appear;
+          animation-name: appear;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
 @-webkit-keyframes shake {
   10%, 30%,  50%, 70%, 90% { 
     transform: rotate(1deg);
